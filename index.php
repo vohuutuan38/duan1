@@ -1,5 +1,4 @@
 <?php
-echo phpinfo()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +10,7 @@ echo phpinfo()
 </head>
 
 <body>
-
+    <h1>Hmm...?</h1>
 </body>
 
 </html>
