@@ -2,7 +2,7 @@
 echo phpinfo()
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<h lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,5 +14,4 @@ echo phpinfo()
 
 </body>
 
-</html>
-// hello
+<!-- hello word -->
