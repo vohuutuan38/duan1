@@ -23,7 +23,7 @@ function category_one($category_id)
 function category_add($data = [])
 {
     $conn = pdo_get_connection();
-    $sql = "INSERT INTO categories(category_name) VALUES (?)";
+    $sql = "INSERT INTO Categories(category_name) VALUES (?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute($data);
 }
@@ -31,7 +31,7 @@ function category_add($data = [])
 function category_delete($category_id)
 {
     $conn = pdo_get_connection();
-    $sql = "DELETE FROM categories WHERE category_id={$category_id}";
+    $sql = "DELETE FROM Categories WHERE category_id={$category_id}";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 }
@@ -39,7 +39,7 @@ function category_delete($category_id)
 function category_update($data = [])
 {
     $conn = pdo_get_connection();
-    $sql = "UPDATE `category` SET `category_name` = ? WHERE `category`.`category_id` = ?";
+    $sql = "UPDATE `Categories` SET `category_name` = ? WHERE `Categories`.`category_id` = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute($data);
 }
