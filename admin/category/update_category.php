@@ -8,7 +8,7 @@
           <div class="form-group">
             <label for="">Mã loại</label>
             <input disabled name="category_id" value="<?php echo $category_one['category_id'] ?>" type="text" class="form-control">
-            <input type="hidden" name="category_id" value="<?php echo $categori_one['category_id'] ?>">
+            <input type="hidden" name="category_id" value="<?php echo $category_one['category_id'] ?>">
           </div>
           <div class="form-group">
             <label for="">Tên loại</label>
@@ -25,7 +25,7 @@
     </div>
   </div>
   <?php
-  if (isset($thongbao) && ($thongbao != "")) {
+if (isset($thongbao) && ($thongbao != "")) {
     echo $thongbao;
-  }
-  ?>
+}
+?>

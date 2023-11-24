@@ -78,13 +78,13 @@
               <select name="category_id" id="" class="form-select" style="height:50px ; width:100px;padding:5px 10px;border:1px solid #ebedf2">
                 <option value="">Tất cả</option>
                 <?php
-                foreach ($list_category as $value) {
-                  extract($value);
-                ?>
+foreach ($list_category as $value) {
+    extract($value);
+    ?>
                   <option value="<?php echo $category_id ?>"><?php echo $category_name ?></option>
                 <?php
-                }
-                ?>
+}
+?>
               </select>
               <input type="text" name="kyw" class="form-control" placeholder="Search..." style="width:260px;margin: 0 10px;" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'">
               <button type="submit" class="btn btn-gradient-primary" name="search_dm" value="Search">Search</button>
@@ -109,30 +109,30 @@
             </thead>
             <tbody>
               <?php
-              foreach ($list_product as $list_product) {
-                extract($list_product);
-                $update_pr = "index.php?act=update_pr&product_id=" . $product_id;
-                $delete_pr = "index.php?act=delete_pr&product_id=" . $product_id;
-                $hinh = "../upload/" . $image;
-                if (is_file($hinh)) {
-                  $image = "<img src='" . $hinh . " 'width='350px' height='100px'>";
-                } else {
-                  $image = "không có hình";
-                }
+foreach ($list_product as $list_product) {
+    extract($list_product);
+    $update_pr = "index.php?act=update_pr&product_id=" . $product_id;
+    $delete_pr = "index.php?act=delete_pr&product_id=" . $product_id;
+    $hinh = "../upload/" . $image;
+    if (is_file($hinh)) {
+        $image = "<img src='" . $hinh . " 'width='350px' height='100px'>";
+    } else {
+        $image = "không có hình";
+    }
 
-                echo ' <tr >
-                         
+    echo ' <tr >
+
                           <td>' . $product_id . '</td>
                           <td>' . $product_name . '</td>
                           <td>' . $price . '</td>
                           <td>' . $image . '</td>
                           <td>' . $description . '</td>
-                          
-                          
+
+
                           <td class="btn1"><a href="' . $update_pr . '"><input class="btn btn-gradient-primary btn2" type="button" value="Sửa"></a><a href="' . $delete_pr . '" onclick="return confirm(`Bạn muốn xóa?`)"; id="delete"><input class="btn btn-gradient-danger btn2" type="button" value="Xóa"></a></td>
                         </tr>';
-              }
-              ?>
+}
+?>
 
             </tbody>
           </table>
@@ -141,24 +141,24 @@
         <div class="list_page">
           <ul>
             <?php
-            if (isset($_GET['page'])) {
+if (isset($_GET['page'])) {
 
-              $page1 = $_GET['page'];
-            } else {
-              $page1 = 1;
-            }
+    $page1 = $_GET['page'];
+} else {
+    $page1 = 1;
+}
 
-            for ($i = 1; $i <= $page; $i++) {
-            ?>
+for ($i = 1; $i <= $page; $i++) {
+    ?>
               <li <?php if ($i == $page1) {
-                    echo 'style="background: -webkit-linear-gradient(270deg, #ffba00 0%, #ff6c00 100%);"';
-                  } else {
-                    echo '';
-                  }
-                  ?>><a href="index.php?act=list_product&page=<?= $i ?>"><?= $i ?></a></li>
+        echo 'style="background: -webkit-linear-gradient(270deg, #ffba00 0%, #ff6c00 100%);"';
+    } else {
+        echo '';
+    }
+    ?>><a href="index.php?act=list_product&page=<?=$i?>"><?=$i?></a></li>
             <?php
-            }
-            ?>
+}
+?>
           </ul>
         </div>
       </div>
