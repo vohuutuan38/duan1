@@ -1,103 +1,73 @@
--- Bảng người dùng (Users)
 CREATE TABLE Users (
   user_id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
-  email VARCHAR(255) UNIQUE NOT NULL,
-  user_type ENUM('admin', 'customer') NOT NULL
+  avatar VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(10) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  role ENUM('admin', 'customer') NOT NULL DEFAULT 'customer',
+  status VARCHAR(10) NOT NULL DEFAULT 'true'
 );
 
--- Bảng danh mục (Categories)
 CREATE TABLE Categories (
   category_id INT AUTO_INCREMENT PRIMARY KEY,
   category_name VARCHAR(255) NOT NULL
 );
 
--- Bảng sản phẩm (Products)
 CREATE TABLE Products (
   product_id INT AUTO_INCREMENT PRIMARY KEY,
   product_name VARCHAR(255) NOT NULL,
-  description TEXT,
-  price DECIMAL(10, 2) NOT NULL,
-  stock_quantity INT NOT NULL,
-  image_url VARCHAR(255),
-  category_id INT,
+  price DOUBLE(10,2) NOT NULL,
+  image VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  category_id INT NOT NULL,
   FOREIGN KEY (category_id) REFERENCES Categories(category_id)
 );
 
--- Bảng đơn hàng (Orders)
-CREATE TABLE Orders (
-  order_id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT,
-  order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  status ENUM('pending', 'processing', 'shipped', 'canceled') NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
-
--- Bảng mục đơn hàng (OrderItems)
-CREATE TABLE OrderItems (
-  order_item_id INT AUTO_INCREMENT PRIMARY KEY,
-  order_id INT,
-  product_id INT,
-  quantity INT NOT NULL,
-  total_price DECIMAL(10, 2) NOT NULL,
-  FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-  FOREIGN KEY (product_id) REFERENCES Products(product_id)
-);
-
--- Bảng quản trị viên (Admins)
-CREATE TABLE Admins (
-  admin_id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT,
-  FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
-
--- Bảng biến thể sản phẩm (ProductVariants)
 CREATE TABLE ProductVariants (
   variant_id INT AUTO_INCREMENT PRIMARY KEY,
   product_id INT,
   size VARCHAR(255),
   color VARCHAR(255),
-  material VARCHAR(255),
   stock_quantity INT,
   FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
 
--- Bảng đánh giá và bình luận (ProductReviews)
-CREATE TABLE ProductReviews (
-  review_id INT AUTO_INCREMENT PRIMARY KEY,
-  product_id INT,
-  user_id INT,
-  rating INT NOT NULL,
-  comment TEXT,
-  review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+CREATE TABLE Comments (
+  comment_id INT AUTO_INCREMENT PRIMARY KEY,
+  content VARCHAR(255) NOT NULL,
+  product_id INT NOT NULL,
+  user_id INT NOT NULL,
+  date_comment VARCHAR(255) NOT NULL,
   FOREIGN KEY (product_id) REFERENCES Products(product_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
--- Bảng chương trình khuyến mãi (Promotions)
-CREATE TABLE Promotions (
-  promotion_id INT AUTO_INCREMENT PRIMARY KEY,
-  product_id INT,
-  discount_percentage DECIMAL(5, 2),
-  start_date TIMESTAMP,
-  end_date TIMESTAMP,
-  FOREIGN KEY (product_id) REFERENCES Products(product_id)
+CREATE TABLE Bill (
+  bill_id INT AUTO_INCREMENT PRIMARY KEY,
+  fullname VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  phone VARCHAR(10) NOT NULL,
+  total_money INT NOT NULL,
+  pttt TINYINT(1) NOT NULL DEFAULT 1 COMMENT '0.Thanh toán khi nhận hàng\r\n1.Thanh toán bằng Paypal\r\n',
+  status TINYINT(1) DEFAULT 0 COMMENT '0.Đơn hàng mới 1.Đang xử lý 2.Đang giao hàng 3.Đã hoàn thành',
+  user_id INT,
+  ngaydathang VARCHAR(255) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
--- Bảng phương thức thanh toán (PaymentMethods)
-CREATE TABLE PaymentMethods (
-  method_id INT AUTO_INCREMENT PRIMARY KEY,
-  method_name VARCHAR(255)
-);
-
--- Bảng lịch sử thanh toán (PaymentHistory)
-CREATE TABLE PaymentHistory (
-  payment_id INT AUTO_INCREMENT PRIMARY KEY,
-  order_id INT,
-  method_id INT,
-  amount DECIMAL(10, 2) NOT NULL,
-  payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-  FOREIGN KEY (method_id) REFERENCES PaymentMethods(method_id)
+CREATE TABLE Cart (
+  order_id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  price DOUBLE(10,2) NOT NULL,
+  amount INT NOT NULL,
+  product_id INT NOT NULL,
+  variant_id INT NOT NULL,
+  bill_id INT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES Users(user_id),
+  FOREIGN KEY (product_id) REFERENCES Products(product_id),
+  FOREIGN KEY (variant_id) REFERENCES ProductVariants(variant_id),
+  FOREIGN KEY (bill_id) REFERENCES Bill(bill_id)
 );
