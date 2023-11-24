@@ -12,7 +12,9 @@ ob_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valiu</title>
+
     <link rel="shortcut icon" href="./assest/images/favicon.png" type="image/x-icon">
+
 </head>
 
 <body>
