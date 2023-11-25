@@ -93,7 +93,7 @@ function delete_product($product_id)
 
 function update_product($product_id, $product_name, $price, $image, $description, $category_id)
 {
-    $sql = "DELETE FROM `size` WHERE `product_id` =" . $product_id;
+    $sql = "DELETE FROM `ProductVariants` WHERE `product_id` =" . $product_id;
     pdo_execute($sql);
     if ($image != "") {
         $sql = "update Products set product_name='" . $product_name . "',price='" . $price . "',img='" . $image . "',description='" . $description . "',category_id='" . $category_id . "' where product_id= " . $product_id;
@@ -103,38 +103,38 @@ function update_product($product_id, $product_name, $price, $image, $description
     pdo_execute($sql);
     $pr_size = $_POST['pr_size'];
     foreach ($pr_size as $key => $pr_size) {
-        $sql = "INSERT INTO size (product_id,pr_size) values('$product_id','$pr_size') ";
+        $sql = "INSERT INTO ProductVariants (product_id,pr_size) values('$product_id','$pr_size') ";
         pdo_execute($sql);
     }
     return $sql;
 }
 function loadall_size()
 {
-    $sql = "SELECT * FROM size";
+    $sql = "SELECT * FROM ProductVariants";
     $list_size = pdo_query($sql);
     return $list_size;
 }
 function load_product_size($product_id)
 {
-    $sql = "SELECT * FROM `size` WHERE `product_id`=" . $product_id;
+    $sql = "SELECT * FROM `ProductVariants` WHERE `product_id`=" . $product_id;
     $load_product_size = pdo_query($sql);
     return $load_product_size;
 }
 function loadall_product_home()
 {
-    $sql = "SELECT * FROM product where 1 order by product_id desc limit 0,8";
+    $sql = "SELECT * FROM Products where 1 order by product_id desc limit 0,8";
     $list_product = pdo_query($sql);
     return $list_product;
 }
 function loadall_product_home2()
 {
-    $sql = "SELECT * FROM product where 1 order by product_id desc limit 4,8";
+    $sql = "SELECT * FROM Products where 1 order by product_id desc limit 4,8";
     $list_product = pdo_query($sql);
     return $list_product;
 }
-function load_product_cungloai($product_id, $categori_id)
+function load_product_cungloai($product_id, $category_id)
 {
-    $sql = "select * from product where categori_id=" . $categori_id . " and product_id<>" . $product_id . " LIMIT 0,8";
+    $sql = "select * from Products where category_id=" . $category_id . " and product_id<>" . $product_id . " LIMIT 0,8";
     $list_product = pdo_query($sql);
     return $list_product;
 }
@@ -152,7 +152,7 @@ function load_all_product_man($page)
     } else {
         $begin = ($page * 12) - 12;
     }
-    $sql = "SELECT * FROM product WHERE category_id=4 LIMIT $begin,12";
+    $sql = "SELECT * FROM Products WHERE category_id=4 LIMIT $begin,12";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -160,7 +160,7 @@ function load_all_product_man($page)
 }
 function count_product_man()
 {
-    $sql = "SELECT * FROM product WHERE categori_id=4";
+    $sql = "SELECT * FROM Products WHERE category_id=4";
     $result = pdo_query($sql);
     return $result;
 }
@@ -177,7 +177,7 @@ function load_all_product_women($page)
     } else {
         $begin = ($page * 12) - 12;
     }
-    $sql = "SELECT * FROM product WHERE categori_id=2 LIMIT $begin,12";
+    $sql = "SELECT * FROM Products WHERE category_id=1 LIMIT $begin,12";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

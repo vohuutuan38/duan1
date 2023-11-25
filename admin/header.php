@@ -13,14 +13,14 @@
   <!-- End layout styles -->
   <link rel="shortcut icon" href="../assets/logo.png" />
   <script src="https://kit.fontawesome.com/cd29af7a45.js" crossorigin="anonymous"></script>
-  <title>Petio Admin</title>
+  <title>Valiu Admin</title>
 
 </head>
 <?php
 if (!isset($_SESSION)) {
   session_start();
 }
-// extract($_SESSION['username']);
+extract($_SESSION['username']);
 ?>
 
 <body>
@@ -73,17 +73,16 @@ if (!isset($_SESSION)) {
 
       <ul class="nav">
         <li class="nav-item nav-profile">
-          <!-- <a href="#" class="nav-link">
+          <a href="#" class="nav-link">
             <div class="nav-profile-image">
               <img src="<?= $avatar ?>" alt="profile">
-              <img src="https://demoda.vn/wp-content/uploads/2022/02/avatar-anime-cute.jpg" alt="profile">
               <span class="login-status online"></span>
             </div>
             <div class="nav-profile-text d-flex flex-column">
               <span class="font-weight-bold mb-2"><?= $username ?> </span>
             </div>
             <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-          </a> -->
+          </a>
 
         </li>
         <li class="nav-item">
@@ -104,7 +103,7 @@ if (!isset($_SESSION)) {
             <i class="mdi mdi-format-list-bulleted menu-icon"></i>
           </a>
         </li>
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="index.php?act=list_account">
             <span class="menu-title">Khách hàng</span>
             <i class="mdi mdi-account menu-icon"></i>
@@ -127,7 +126,7 @@ if (!isset($_SESSION)) {
             <span class="menu-title">Thống kê</span>
             <i class="mdi mdi-chart-areaspline menu-icon"></i>
           </a>
-        </li> -->
+        </li>
       </ul>
     </nav>
     <!-- partial -->

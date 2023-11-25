@@ -25,7 +25,7 @@
     </div>
   </div>
   <?php
-if (isset($thongbao) && ($thongbao != "")) {
+  if (isset($thongbao) && ($thongbao != "")) {
     echo $thongbao;
-}
-?>
+  }
+  ?>
