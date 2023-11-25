@@ -65,7 +65,7 @@
 
           <div class="item">
             <?php
-            $anh = "upload/" . $img;
+            $anh = "upload/" . $image;
             echo '
              <img class="img-fluid" src="' . $anh . '" alt="">
             ';
@@ -96,25 +96,40 @@
             echo '
             <div class="product-price-discount"><span>$ ' . $price . '</span></div>   
           </div>
-          <p>' . $mo_ta . '</p>
+          <p>' . $description . '</p>
           ';
             ?>
             <form action="index.php?act=checkout" method="post">
               <div class="row">
                 <div class="col-md-6">
                   <label for="size">Size</label>
-                  <select name="size_id" class="form-control">
+                  <select name="variant_id" class="form-control">
                     <option value="0">Chọn size</option>
                     <?php
-                    foreach ($list_size as $list_size) {
-                      extract($list_size);
-                      echo '<option value=" ' . $pr_size . '">' . $pr_size . '</option>';
+                    $sizes = array_unique(array_column($list_variant, 'size')); // Lấy danh sách các size duy nhất
+                    foreach ($sizes as $size) {
+                      echo '<option value="' . $size . '">' . $size . '</option>';
                     }
-
                     ?>
                   </select>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="color">Color</label>
+                  <select name="variant_id" class="form-control">
+                    <option value="0">Chọn màu</option>
+                    <?php
+                    $colors = array_unique(array_column($list_variant, 'color')); // Lấy danh sách các màu duy nhất
+                    foreach ($colors as $color) {
+                      echo '<option value="' . $color . '">' . $color . '</option>';
+                    }
+                    ?>
+                  </select>
+                </div>
+              </div>
+
               <div class="product-count">
                 <label for="size">Quantity</label>
                 <input style="border-color: #dee2e6;width: 100px;border-radius: 5px;" value="0" id="product_amount" name="product_amount" type="number" min="1" max="10">
@@ -263,7 +278,7 @@
             foreach ($product_cung_loai as $product_cung_loai) {
               extract($product_cung_loai);
               $linksp = "index.php?act=detail&product_id=" . $product_id;
-              $anh = "upload/" . $img;
+              $anh = "upload/" . $image;
               echo '
           <div class="col-lg-3 col-md-6">
           <a  href="' . $linksp . '">

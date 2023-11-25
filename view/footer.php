@@ -1,20 +1,20 @@
 <footer class="footer-area section_gap">
     <div class="container">
         <div class="row">
-        <div class="col-lg-4  col-md-6 col-sm-6">
+            <div class="col-lg-4  col-md-6 col-sm-6">
                 <div class="single-footer-widget">
-                  <a href="index.php"> <img src="./view/assets/img/logo12.png" alt="anh" style="width:350px; margin-top: -40px;"></a>
+                    <a href="index.php"> <img src="./assets/logo.png" alt="anh" style="width:350px; margin-top: -40px;"></a>
                 </div>
             </div>
             <div class="col-lg-3  col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6>About Us</h6>
                     <p>
-                       Mọi thắc mắc xin liên hệ qua <br> Email: <a href="#"style="color:#f3b206">caodang@fpt.edu.vn</a> SDT:0911***585
+                        Mọi thắc mắc xin liên hệ qua <br> Email: <a href="#" style="color:#f3b206">caodang@fpt.edu.vn</a> SDT:0911***585
                     </p>
                 </div>
             </div>
-           
+
             <div class="col-lg-3  col-md-6 col-sm-6">
                 <div class="single-footer-widget mail-chimp">
                     <h6 class="mb-20">Instragram Feed</h6>

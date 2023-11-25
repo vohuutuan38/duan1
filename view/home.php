@@ -8,50 +8,6 @@
 <section class="banner-area">
     <div class="container">
         <div class="row fullscreen align-items-center justify-content-start">
-            <div class="col-lg-12">
-                <div class="active-banner-slider owl-carousel">
-                    <!-- single-slide -->
-                    <div class="row single-slide align-items-center d-flex">
-                        <div class="col-lg-5 col-md-6">
-                            <div class="banner-content">
-                                <h1>Nike New <br>Collection!</h1>
-                                <h1>Bộ Sưu tập mới!</h1>
-                                <p>Nhập khẩu Chính Hãng 100%, nguyên hộp. <br>
-                                    Rất nhiều mẫu đẹp, độc. Giảm giá đến 50%.<br> Miễn phí giao hàng toàn quốc. Đổi Hàng trong 30 ngày dễ dàng. <br> Hậu mãi trọn đời.</p>
-                                <div class="add-bag d-flex align-items-center">
-                                    <a class="add-btn" href="index.php?act=detail&product_id=68"><span class="lnr lnr-cross"></span></a>
-                                    <span class="add-text text-uppercase">Mô tả chi tiết sản phẩm</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="banner-img">
-                                <img class="img-fluid" src="./view/assets/img/banner/banner-img.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single-slide -->
-                    <div class="row single-slide">
-                        <div class="col-lg-5">
-                            <div class="banner-content">
-                                <h1>Nike New <br>Collection!</h1>
-                                <p>Nhập khẩu Chính Hãng 100%, nguyên hộp. <br>
-                                    Rất nhiều mẫu đẹp, độc. Giảm giá đến 50%.<br> Miễn phí giao hàng toàn quốc. Đổi Hàng trong 30 ngày dễ dàng. <br> Hậu mãi trọn đời.</p>
-                                <div class="add-bag d-flex align-items-center">
-                                    <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-                                    <span class="add-text text-uppercase">Thêm vào giỏ</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="banner-img">
-                                <img class="img-fluid" src="./view/assets/img/banner/banner-img.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -114,7 +70,7 @@
                     <div class="col-lg-8 col-md-8">
                         <div class="single-deal">
                             <div class="overlay"></div>
-                            <img class="img-fluid w-100" src="./view/assets/img/category/gucci.jpg" alt="">
+                            <img class="img-fluid w-100" src="./view/assets/img/category/c1.jpg" alt="">
                             <a href="./view/assets/img/category/c1.jpg" class="img-pop-up" target="_blank">
                                 <div class="deal-details">
                                     <h6 class="deal-title">Gucci</h6>
@@ -125,32 +81,19 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="single-deal">
                             <div class="overlay"></div>
-                            <img class="img-fluid w-100" src="./view/assets/img/category/puma.jfif" alt="">
+                            <img class="img-fluid w-100" src="./view/assets/img/category/c2.jpg" alt="">
                             <a href="./view/assets/img/category/c2.jpg" class="img-pop-up" target="_blank">
                                 <div class="deal-details">
                                     <h6 class="deal-title">Puma</h6>
                                 </div>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
                         <div class="single-deal">
                             <div class="overlay"></div>
-                            <img class="img-fluid w-100" src="./view/assets/img/category/Nike.jfif" alt="">
+                            <img class="img-fluid w-100" src="./view/assets/img/category/c3.jpg" alt="">
                             <a href="./view/assets/img/category/c3.jpg" class="img-pop-up" target="_blank">
                                 <div class="deal-details">
                                     <h6 class="deal-title">Nike</h6>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8">
-                        <div class="single-deal">
-                            <div class="overlay"></div>
-                            <img class="img-fluid w-100" src="./view/assets/img/category/adidas.jpeg" alt="">
-                            <a href="./view/assets/img/category/c4.jpg" class="img-pop-up" target="_blank">
-                                <div class="deal-details">
-                                    <h6 class="deal-title">Adidas</h6>
                                 </div>
                             </a>
                         </div>
@@ -160,7 +103,7 @@
             <div class="col-lg-4 col-md-6" style="padding-top: 45px">
                 <div class="single-deal">
                     <div class="overlay"></div>
-                    <img class="img-fluid w-100" src="./view/assets/img/category/LV-Archlight.jpg" alt="">
+                    <img class="img-fluid w-100" src="./view/assets/img/category/c5.jpg" alt="">
                     <a href="./view/assets/img/category/c5.jpg" class="img-pop-up" target="_blank">
                         <div class="deal-details">
                             <h6 class="deal-title">Louis Vuitton</h6>
@@ -182,48 +125,46 @@
                 <div class="col-lg-6 text-center">
                     <div class="section-title">
                         <h1>Sản phẩm mới</h1>
-                        <p>Các sản phẩm đang được kinh doanh tại Be-Sneaker đều là các sản phẩm mới được nhập khẩu về từ
+                        <p>Các sản phẩm đang được kinh doanh tại Valiu đều là các sản phẩm mới được nhập khẩu về từ
                             USA</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <!-- single product -->
                 <?php
-
                 foreach ($product_new as $product_new) {
                     extract($product_new);
                     $linksp = "index.php?act=detail&product_id=" . $product_id;
                     $cart = "index.php?act=cart&product_id=" . $product_id;
-                    $anh = "upload/" . $img;
+                    $anh = "upload/" . $image;
                     echo '
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                            <a href="' . $linksp . '">
-                        <img class="img-fluid" src="' . $anh . '" alt="">
-                        <div class="product-details">
-                            <h6>' . $product_name . '</h6>
-                            <div class="price">
-                                <h6> $' . $price . '.00</h6>
-                                <h6 class="l-through">$' . $price + 50 . '.00</h6>
-                            </div>
-                            <div class="prd-bottom">
-                            </a>
-                            <a href="' . $linksp . '" class="social-info">
-                            <span class="lnr lnr-move"></span>
-                            <p class="hover-text">Xem thêm</p>
-                             </a>
-                            <a href="' . $cart . '" class="social-info">
-                            <span class="lnr lnr-heart"></span>
-                            <p class="hover-text">Thêm vào yêu thích</p>
-                       
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-product">
+                                    <a href="' . $linksp . '">
+                                <img class="img-fluid" src="' . $anh . '" alt="">
+                                <div class="product-details">
+                                    <h6>' . $product_name . '</h6>
+                                    <div class="price">
+                                        <h6> $' . $price . '.00</h6>
+                                        <h6 class="l-through">$' . $price + 50 . '.00</h6>
+                                    </div>
+                                    <div class="prd-bottom">
+                                    </a>
+                                    <a href="' . $linksp . '" class="social-info">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">Xem thêm</p>
+                                     </a>
+                                    <a href="' . $cart . '" class="social-info">
+                                    <span class="lnr lnr-heart"></span>
+                                    <p class="hover-text">Thêm vào yêu thích</p>
+
+                                    </div>
+                                </div>
+                                </a>
+
                             </div>
                         </div>
-                        </a>
-                        
-                    </div>
-                </div>
-                ';
+                        ';
                 }
                 ?>
 
@@ -244,48 +185,189 @@
             <div class="row">
                 <!-- single product -->
                 <?php
-                foreach ($product_new2 as $product_new2) {
-                    extract($product_new2);
-                    $linksp = "index.php?act=detail&product_id=" . $product_id;
-                    $anh = "upload/" . $img;
-                    echo '
+                // foreach ($product_new2 as $product_new2) {
+                //     extract($product_new2);
+                //     $linksp = "index.php?act=detail&product_id=" . $product_id;
+                //     $anh = "upload/" . $img;
+                //     echo '
+                // <div class="col-lg-3 col-md-6">
+                //     <div class="single-product">
+                //             <a href="' . $linksp . '">
+                //         <img class="img-fluid" src="' . $anh . '" alt="">
+                //         <div class="product-details">
+                //             <h6>' . $product_name . '</h6>
+                //             <div class="price">
+                //                 <h6>$' . $price . '.00</h6>
+                //                 <h6 class="l-through">$' . $price + 50 . '.00</h6>
+                //             </div>
+                //             <div class="prd-bottom">
+                //             <form action="index.php?act=cart"  method="post">
+                //                 <input type="hidden" name="product_id" value=" ' . $product_id . '">
+                //                 <input type="hidden" name="product_name" value=" ' . $product_name . '">
+                //                 <input type="hidden" name="price" value=" ' . $price . '">
+                //                 <input type="hidden" name="img" value=" ' . $img . '">
+                //                 <div class="prd-bottom"> 
+                //                 <a href="' . $linksp . '" class="social-info">
+                //                 <span class="lnr lnr-move"></span>
+                //                 <p class="hover-text">Xem thêm</p>
+                //                 </a>
+                //                 <a href="' . $cart . '" class="social-info">
+                //                 <span class="lnr lnr-heart"></span>
+                //                 <p class="hover-text">Thêm vào yêu thích</p>
+                //                 </a>
+                //                 </div>      
+                //             </from>
+
+                //             </div>
+                //         </div>
+                //         </a>
+
+                //     </div>
+                // </div>
+                // ';
+                // }
+                ?>
+                <!-- star product 2 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
-                            <a href="' . $linksp . '">
-                        <img class="img-fluid" src="' . $anh . '" alt="">
-                        <div class="product-details">
-                            <h6>' . $product_name . '</h6>
-                            <div class="price">
-                                <h6>$' . $price . '.00</h6>
-                                <h6 class="l-through">$' . $price + 50 . '.00</h6>
+                        <a href="' . $linksp . '">
+                            <img class="img-fluid" src="./view/assets/img/product/p3.jpg" alt="">
+                            <div class="product-details">
+                                <h6>Vali luisvuiton</h6>
+                                <div class="price">
+                                    <h6>1.200.000</h6>
+                                    <h6 class="l-through">800.000</h6>
+                                </div>
+                                <div class="prd-bottom">
+                                    <form action="index.php?act=cart" method="post">
+                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
+                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
+                                        <input type="hidden" name="price" value=" ' . $price . '">
+                                        <input type="hidden" name="img" value=" ' . $img . '">
+                                        <div class="prd-bottom">
+                                            <a href="' . $linksp . '" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">Xem thêm</p>
+                                            </a>
+                                            <a href="' . $cart . '" class="social-info">
+                                                <span class="lnr lnr-heart"></span>
+                                                <p class="hover-text">Thêm vào yêu thích</p>
+                                            </a>
+                                        </div>
+                                        </from>
+
+                                </div>
                             </div>
-                            <div class="prd-bottom">
-                            <form action="index.php?act=cart"  method="post">
-                                <input type="hidden" name="product_id" value=" ' . $product_id . '">
-                                <input type="hidden" name="product_name" value=" ' . $product_name . '">
-                                <input type="hidden" name="price" value=" ' . $price . '">
-                                <input type="hidden" name="img" value=" ' . $img . '">
-                                <div class="prd-bottom"> 
-                                <a href="' . $linksp . '" class="social-info">
-                                <span class="lnr lnr-move"></span>
-                                <p class="hover-text">Xem thêm</p>
-                                </a>
-                                <a href="' . $cart . '" class="social-info">
-                                <span class="lnr lnr-heart"></span>
-                                <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-                                </div>      
-                            </from>
-                                
-                            </div>
-                        </div>
                         </a>
-                        
+
                     </div>
                 </div>
-                ';
-                }
-                ?>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                        <a href="' . $linksp . '">
+                            <img class="img-fluid" src="./view/assets/img/product/p9.jpg" alt="">
+                            <div class="product-details">
+                                <h6>Vali tokyo</h6>
+                                <div class="price">
+                                    <h6>2.500.00</h6>
+                                    <h6 class="l-through">2.000.000</h6>
+                                </div>
+                                <div class="prd-bottom">
+                                    <form action="index.php?act=cart" method="post">
+                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
+                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
+                                        <input type="hidden" name="price" value=" ' . $price . '">
+                                        <input type="hidden" name="img" value=" ' . $img . '">
+                                        <div class="prd-bottom">
+                                            <a href="' . $linksp . '" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">Xem thêm</p>
+                                            </a>
+                                            <a href="' . $cart . '" class="social-info">
+                                                <span class="lnr lnr-heart"></span>
+                                                <p class="hover-text">Thêm vào yêu thích</p>
+                                            </a>
+                                        </div>
+                                        </from>
+
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                        <a href="' . $linksp . '">
+                            <img class="img-fluid" src="./view/assets/img/product/p5.jpg" alt="">
+                            <div class="product-details">
+                                <h6>Vali UC</h6>
+                                <div class="price">
+                                    <h6>1.600.000</h6>
+                                    <h6 class="l-through">900.000</h6>
+                                </div>
+                                <div class="prd-bottom">
+                                    <form action="index.php?act=cart" method="post">
+                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
+                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
+                                        <input type="hidden" name="price" value=" ' . $price . '">
+                                        <input type="hidden" name="img" value=" ' . $img . '">
+                                        <div class="prd-bottom">
+                                            <a href="' . $linksp . '" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">Xem thêm</p>
+                                            </a>
+                                            <a href="' . $cart . '" class="social-info">
+                                                <span class="lnr lnr-heart"></span>
+                                                <p class="hover-text">Thêm vào yêu thích</p>
+                                            </a>
+                                        </div>
+                                        </from>
+
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                        <a href="' . $linksp . '">
+                            <img class="img-fluid" src="./view/assets/img/product/p7.jpg" alt="">
+                            <div class="product-details">
+                                <h6>Vali Canvas</h6>
+                                <div class="price">
+                                    <h6>2.100.000</h6>
+                                    <h6 class="l-through">1.700.000</h6>
+                                </div>
+                                <div class="prd-bottom">
+                                    <form action="index.php?act=cart" method="post">
+                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
+                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
+                                        <input type="hidden" name="price" value=" ' . $price . '">
+                                        <input type="hidden" name="img" value=" ' . $img . '">
+                                        <div class="prd-bottom">
+                                            <a href="' . $linksp . '" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">Xem thêm</p>
+                                            </a>
+                                            <a href="' . $cart . '" class="social-info">
+                                                <span class="lnr lnr-heart"></span>
+                                                <p class="hover-text">Thêm vào yêu thích</p>
+                                            </a>
+                                        </div>
+                                        </from>
+
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- end product 2 -->
 
             </div>
         </div>
@@ -330,7 +412,7 @@
                 <div class="active-exclusive-product-slider">
                     <!-- single exclusive carousel -->
                     <div class="single-exclusive-slider">
-                        <img class="img-fluid" src="./view/assets/img/product/e-p1.png" alt="">
+                        <img class="img-fluid" src="./view/assets/img/slice.png" alt="">
                         <div class="product-details">
                             <div class="price">
                                 <h6>$150.00</h6>
@@ -346,7 +428,7 @@
                     </div>
                     <!-- single exclusive carousel -->
                     <div class="single-exclusive-slider">
-                        <img class="img-fluid" src="./view/assets/img/product/e-p1.png" alt="">
+                        <img class="img-fluid" src="./view/assets/img/slice.png" alt="">
                         <div class="product-details">
                             <div class="price">
                                 <h6>$150.00</h6>
@@ -363,7 +445,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </section>
 <!-- End exclusive deal Area -->
 
@@ -405,7 +486,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -417,7 +498,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -429,7 +510,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -441,7 +522,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -453,7 +534,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -465,7 +546,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -477,7 +558,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -489,7 +570,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>
@@ -501,7 +582,7 @@
                         <div class="single-related-product d-flex">
                             <a href="#"><img src="./view/assets/img/product/p2.jpg" width="60px" alt=""></a>
                             <div class="desc">
-                                <a href="#" class="title">Black lace Heels</a>
+                                <a href="#" class="title">Vali Holly</a>
                                 <div class="price">
                                     <h6>$189.00</h6>
                                     <h6 class="l-through">$210.00</h6>

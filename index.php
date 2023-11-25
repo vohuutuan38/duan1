@@ -14,7 +14,7 @@ use PHPMailer\PHPMailer\Exception;
 
 
 
-include 'model/PDO.php';
+include 'model/pdo.php';
 include './view/header.php';
 include './model/user.php';
 include './model/comment.php';
@@ -172,8 +172,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $product_id = $_GET['product_id'];
                 $oneproduct = loadone_product($product_id);
                 extract($oneproduct);
-                $list_size = load_product_size($product_id);
-                extract($list_size);
+                $list_variant = load_product_variant($product_id);
+                extract($list_variant);
                 $product_name = $oneproduct['product_name'];
                 $price = $oneproduct['price'];
                 $img = $oneproduct['img'];
@@ -208,14 +208,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $pr_name = $_POST['product_name'];
                 $pr_price = $_POST['product_price'];
                 $pr_img = $_POST['product_img'];
-                $pr_size = $_POST['size_id'];
+                $variant_id = $_POST['variant_id'];
                 if (isset($_POST['total_price'])) {
                     $total_cart = $_POST['total_price'];
                 } else {
                     $total_cart = 0;
                 }
                 $product_amount = $_POST['product_amount'];
-                $bill = [$product_id, $pr_name, $pr_price, $pr_img, $product_amount, $pr_size, $total_cart];
+                $bill = [$product_id, $pr_name, $pr_price, $pr_img, $product_amount, $variant_id, $total_cart];
                 array_push($_SESSION['fake_cart'], $bill);
                 // header('Location:index.php?act=checkout');
                 // echo '<pre>';
@@ -255,8 +255,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $product_id = $_GET['product_id'];
                 $oneproduct = loadone_product($product_id);
                 extract($oneproduct);
-                $product_cung_loai = load_product_cungloai($product_id, $categori_id);
-                $list_size = load_product_size($product_id);
+                $product_cung_loai = load_product_cungloai($product_id, $category_id);
+                $list_variant = load_product_variant($product_id);
                 if (isset($_SESSION['username'])) {
                     $list_img_cart = list_img_cart($_SESSION['username']['user_id']);
                 }
@@ -280,17 +280,17 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 };
                 break;
             }
-        case 'man_pr':
+        case 'valikeo':
             $count_product = count(count_product_man());
             $page = ceil($count_product / 12);
             $load_all_product_man = load_all_product_man(1);
-            include './view/man_pr.php';
+            include './view/valikeo.php';
             break;
-        case 'woman_pr':
+        case 'valichobe':
             $count_product = count(count_product_women());
             $page = ceil($count_product / 12);
             $load_all_product_women = load_all_product_women(1);
-            include './view/woman_pr.php';
+            include './view/valichobe.php';
             break;
         case 'search_pr':
             $text_search = $_POST['search_pr'];

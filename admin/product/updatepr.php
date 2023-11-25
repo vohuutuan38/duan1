@@ -32,10 +32,6 @@ if (is_file($hinh)) {
             </select>
           </div>
           <div class="form-group">
-            <label for="">Mã sản phẩm</label>
-            <input disabled name="product_id" type="text" value="<?= $product_id ?>" class="form-control">
-          </div>
-          <div class="form-group">
             <label for="">Tên sản phẩm</label>
             <input name="product_name" type="text" value="<?= $product_name ?>" class="form-control">
           </div>
@@ -86,7 +82,6 @@ if (is_file($hinh)) {
             </div>
 
           <div class=" form-group mt-3">
-            <input type="hidden" name="size_id">
             <input type="hidden" name="product_id" value="<?= $product_id ?>">
             <input class="btn btn-primary" type="submit" name="capnhatpr" value="Cập nhật">
             <input class="btn btn-secondary" type="reset" value="Nhập lại">

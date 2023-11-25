@@ -17,7 +17,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>BE-Sneaker Shop bán giày</title>
+    <title>Valiu</title>
     <!--
         CSS
         ============================================= -->
@@ -35,14 +35,14 @@
     <link rel="stylesheet" href="./view/assets/css/jquerysctipttop.css">
     <link rel="stylesheet" href="./view/assets/css/availability-calendar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'vi',
                 includedLanguages: 'en,vi,af,df',
             }, 'google_translate_element');
         }
-    </script>
+    </script> -->
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <style>
@@ -87,14 +87,11 @@
 <body>
 
     <div id="google_translate_element"></div>
-    <div id="layer_translate"></div>
     <!-- Start Header Area -->
     <header class="header_area sticky-header">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light main_box">
                 <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.php"><img src="./view/assets/img/logo12.png" alt="" width="270px"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -105,24 +102,10 @@
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="index.php">Trang chủ</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a href="index.php?act=man_pr" class="nav-link " role="button" aria-haspopup="true" aria-expanded="false">Nam</a>
-                                <!-- <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="category.html">Boots</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="category.html">Sandal</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="category.html">Giày thể thao</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="category.html">Giày chạy bộ</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="category.html">Giày đá banh</a></li>
-                                </ul> -->
+                                <a href="index.php?act=valikeo" class="nav-link " role="button" aria-haspopup="true" aria-expanded="false">Vali kéo nhựa</a>
                             </li>
                             <li class="nav-item submenu dropdown">
-                                <a href="index.php?act=woman_pr" class="nav-link " role="button" aria-haspopup="true" aria-expanded="false">Nữ</a>
-                                <!-- <ul class=" dropdown-menu">
-                            <li class="nav-item "><a class="nav-link" href="category.html">Boots</a></li>
-                            <li class="nav-item"><a class="nav-link" href="category.html">Sandal</a></li>
-                            <li class="nav-item"><a class="nav-link" href="category.html">Giày thể thao nữ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="category.html">Giày chạy bộ - đi bộ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="category.html">Giày búp bê</a></li>
-                        </ul> -->
+                                <a href="index.php?act=valichobe" class="nav-link " role="button" aria-haspopup="true" aria-expanded="false">Vali kéo trẻ em</a>
                             </li>
 
                             <li class="nav-item"><a class="nav-link" href="index.php?act=contact">Liên hệ</a></li>
@@ -158,7 +141,7 @@
                                         extract($_SESSION['username']);
                                     ?>
                                         <?php
-                                        if ($role == '1') {
+                                        if ($role == 'admin') {
                                         ?>
                                             <li>
                                             <li class="nav-item"><a class="nav-link" href="admin/index.php"> Đăng nhập

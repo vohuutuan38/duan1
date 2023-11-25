@@ -93,56 +93,56 @@ function delete_product($product_id)
 
 function update_product($product_id, $product_name, $price, $image, $description,  $category_id)
 {
-    $sql_delete_variants = "DELETE FROM `ProductVariants` WHERE `product_id` = ?";
-    pdo_execute($sql_delete_variants, $product_id);
+    $sql_delete_variants = "DELETE FROM `ProductVariants` WHERE `product_id` =" . $product_id;
+    pdo_execute($sql_delete_variants);
     if ($image != "") {
         $sql = "update Products set product_name='" . $product_name . "',price='" . $price . "',image='" . $image . "',description='" . $description . "',category_id='" . $category_id . "' where product_id= " . $product_id;
     } else {
         $sql = "update Products set product_name='" . $product_name . "',price='" . $price . "',description='" . $description . "',category_id='" . $category_id . "' where product_id= " . $product_id;
     }
     pdo_execute($sql);
-    if ($sql) {
-        // Lấy thông tin sản phẩm vừa thêm vào
-        $sql = "SELECT * FROM Products ORDER BY product_id DESC LIMIT 1";
-        $a = pdo_query_one($sql);
-        $product_id = $a['product_id'];
+    // if ($sql) {
+    //     // Lấy thông tin sản phẩm vừa thêm vào
+    //     $sql = "SELECT * FROM Products ORDER BY product_id DESC LIMIT 1";
+    //     $a = pdo_query_one($sql);
+    //     $product_id = $a['product_id'];
 
-        // Lấy thông tin từ form
-        $quantity = $_POST['quantity'];
-        $color = $_POST['color'];
-        $size = $_POST['size'];
+    //     // Lấy thông tin từ form
+    $quantity = $_POST['quantity'];
+    $color = $_POST['color'];
+    $size = $_POST['size'];
 
-        // Kiểm tra số lượng mảng và thực hiện thêm vào ProductVariants
-        if (is_numeric($quantity) && is_array($color) && is_array($size)) {
-            // Lặp qua các mảng color và size để thêm biến vào ProductVariants
-            foreach ($color as $key => $color_value) {
-                $size_value = $size[$key];
+    //     // Kiểm tra số lượng mảng và thực hiện thêm vào ProductVariants
+    if (is_numeric($quantity) && is_array($color) && is_array($size)) {
+        // Lặp qua các mảng color và size để thêm biến vào ProductVariants
+        foreach ($color as $key => $color_value) {
+            $size_value = $size[$key];
 
-                // Thêm biến vào ProductVariants
-                $sql_variant = "INSERT INTO ProductVariants (product_id, stock_quantity, color, size) VALUES ('$product_id', '$quantity', '$color_value', '$size_value')";
-                echo "Debug: sql = $sql_variant";
-                pdo_execute($sql_variant);
-            }
-        } else {
-            echo "Lỗi: Số lượng không hợp lệ hoặc mảng color/size rỗng.";
+            // Thêm biến vào ProductVariants
+            $sql_variant = "INSERT INTO ProductVariants (product_id, stock_quantity, color, size) VALUES ('$product_id', '$quantity', '$color_value', '$size_value')";
+            echo "Debug: sql = $sql_variant";
+            pdo_execute($sql_variant);
         }
     } else {
-        echo "Lỗi: Không thể thêm sản phẩm.";
+        echo "Lỗi: Số lượng không hợp lệ hoặc mảng color/size rỗng.";
     }
+    // } else {
+    //     echo "Lỗi: Không thể thêm sản phẩm.";
+    // }
 
     return $sql;
 }
-function loadall_size()
+function loadall_variant()
 {
     $sql = "SELECT * FROM ProductVariants";
-    $list_size = pdo_query($sql);
-    return $list_size;
+    $list_variant = pdo_query($sql);
+    return $list_variant;
 }
-function load_product_size($product_id)
+function load_product_variant($product_id)
 {
     $sql = "SELECT * FROM `ProductVariants` WHERE `product_id`=" . $product_id;
-    $load_product_size = pdo_query($sql);
-    return $load_product_size;
+    $load_product_variant = pdo_query($sql);
+    return $load_product_variant;
 }
 function loadall_product_home()
 {
@@ -184,7 +184,7 @@ function load_all_product_man($page)
 }
 function count_product_man()
 {
-    $sql = "SELECT * FROM Products WHERE category_id=4";
+    $sql = "SELECT * FROM Products WHERE category_id=1";
     $result = pdo_query($sql);
     return $result;
 }
@@ -201,7 +201,7 @@ function load_all_product_women($page)
     } else {
         $begin = ($page * 12) - 12;
     }
-    $sql = "SELECT * FROM Products WHERE category_id=1 LIMIT $begin,12";
+    $sql = "SELECT * FROM Products WHERE category_id=5 LIMIT $begin,12";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -209,14 +209,14 @@ function load_all_product_women($page)
 }
 function count_product_women()
 {
-    $sql = "SELECT * FROM product WHERE categori_id=2";
+    $sql = "SELECT * FROM Products WHERE category_id=5";
     $result = pdo_query($sql);
     return $result;
 }
 function search_pr($text_search)
 {
     $conn = pdo_get_connection();
-    $sql = "SELECT * FROM product WHERE product_name LIKE '%$text_search%'";
+    $sql = "SELECT * FROM Products WHERE product_name LIKE '%$text_search%'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

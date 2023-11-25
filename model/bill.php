@@ -50,10 +50,10 @@ function insert_new_bill($username, $address, $phone, $total_money, $pttt, $stat
     $sql = "INSERT INTO `Bill` (`fullname`, `address`, `phone`, `total_money`, `pttt`, `status`, `user_id`, `ngaydathang`) VALUES ('$username', '$address', '$phone', '$total_money', '$pttt', '$status', '$user_id', '$ngaydathang')";
     return pdo_execute_return_lastInsertId($sql);
 }
-function insert_cart($user_id, $price, $amount, $product_id, $size_id, $bill_id, $product_name)
+function insert_cart($user_id, $price, $amount, $product_id, $variant_id, $bill_id, $product_name)
 {
-    // $sql = "INSERT INTO `Cart` (`user_id`, `price`, `amount`, `product_id`, `size_id`, `bill_id`) VALUES ('$user_id', '$price', '$amount', '$product_id', '$size_id','$bill_id')";
-    $sql = "INSERT INTO `Cart` (`user_id`, `price`, `amount`, `product_id`, `size_id`, `bill_id`,`product_name`) VALUES ('$user_id', '$price', '$amount', '$product_id',$size_id, '$bill_id','$product_name')";
+
+    $sql = "INSERT INTO `Cart` (`user_id`, `price`, `amount`, `product_name`, `product_id`, `variant_id`,`bill_id`) VALUES ('$user_id', '$price', '$amount', '$product_name','$product_id', '$variant_id','$bill_id')";
     return pdo_execute($sql);
 }
 function list_cart($bill_id)
