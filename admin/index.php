@@ -15,8 +15,8 @@ include '../model/statistical.php';
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
-        //danhmuc
-        case 'add_category':{
+            //danhmuc
+        case 'add_category': {
                 if (isset($_POST['btn_add_category'])) {
                     extract($_POST);
                     $data = [$category_name];
@@ -52,7 +52,7 @@ if (isset($_GET['act'])) {
             }
             include "./category/list_categories.php";
             break;
-        // sản phẩm
+            // sản phẩm
         case 'add_product':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $product_name = $_POST['product_name'];
@@ -120,34 +120,33 @@ if (isset($_GET['act'])) {
             break;
         case 'updatepr':
             if (isset($_POST['capnhatpr']) && ($_POST['capnhatpr'])) {
-                $categori_id = $_POST['categori_id'];
+                $category_id = $_POST['category_id'];
                 $product_id = $_POST['product_id'];
                 $product_name = $_POST['product_name'];
                 $price = $_POST['price'];
-                $img = $_FILES['img']['name'];
+                $image = $_FILES['image']['name'];
                 $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES['img']['name']);
-                if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                $target_file = $target_dir . basename($_FILES['image']['name']);
+                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                     // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } else {
                     //echo "Sorry, there was an error uploading your file.";
                 }
-                $mo_ta = $_POST['mo_ta'];
-                $number_of_view = $_POST['number_of_view'];
-                update_product($product_id, $product_name, $price, $image, $description, $number_of_view, $category_id);
+                $description = $_POST['description'];
+                update_product($product_id, $product_name, $price, $image, $description, $category_id);
                 echo '<p id="mess">Đã cập nhật sản phẩm</p>';
             }
             $result = category_all();
             $list_size = loadall_size();
             $load_product_size = load_product_size($product_id);
-            $count_product = count(loadall_product($_SESSION['kyw'][0], $_SESSION['categori'][0]));
+            $count_product = count(loadall_product($_SESSION['kyw'][0], $_SESSION['category'][0]));
             // echo $count_product;
             $page = ceil($count_product / 7);
-            $list_product = loadall_product_admin($_SESSION['kyw'][0], $_SESSION['categori'][0], $page);
+            $list_product = loadall_product_admin($_SESSION['kyw'][0], $_SESSION['category'][0], $page);
 
             include "./product/list_product.php";
             break;
-        //account
+            //account
         case 'list_account':
             $list_account = load_all_account();
             include "./account/list_account.php";
@@ -198,7 +197,7 @@ if (isset($_GET['act'])) {
             include "./account/update_account_admin.php";
             break;
 
-        //Bình luận
+            //Bình luận
         case 'list_comment':
             //lấy danh sách bình luận
             $listbl = load_all_comment();
@@ -215,7 +214,7 @@ if (isset($_GET['act'])) {
             $listbl = load_all_comment();
             include 'comment/list_comment.php';
             break;
-        //đơn hàng
+            //đơn hàng
         case 'delete_cart':
             # code...
             if (isset($_GET['id'])) {
@@ -363,7 +362,7 @@ if (isset($_GET['act'])) {
             $listbill = load_all_bill();
             include './bill/list_bill.php';
             break;
-        // thống kê
+            // thống kê
         case 'detail_bill':
             $bill_id = $_GET['id'];
             $detail_bill = load_bill_detail($bill_id);
@@ -375,7 +374,7 @@ if (isset($_GET['act'])) {
             $listthongke = load_all_statistical();
             include './statistical/chart.php';
             break;
-        // biểu đồ
+            // biểu đồ
         case 'list_statistical':
             $count_bill = count_bill();
             $listthongke = load_all_statistical();

@@ -17,7 +17,7 @@ if (is_file($hinh)) {
         <form action="index.php?act=updatepr" enctype="multipart/form-data" method="post">
           <div class="form-group">
             <label for="">Danh mục</label>
-            <select name="categori_id" class="form-select" id="">
+            <select name="category_id" class="form-select" id="">
               <option value="0">Tất cả</option>
               <?php
 
@@ -48,12 +48,42 @@ if (is_file($hinh)) {
             <div class="form-control mb-2" style="width:147px">
               <?= $anh ?>
             </div>
-            <input class="form-control" type="file" name="img" class="form-control" id="">
+            <input class="form-control" type="file" name="image" class="form-control" id="">
           </div>
           <div class="form-group">
             <label for="">Mô tả</label>
-            <textarea name="mo_ta" id="" cols="" rows="" class="form-control"" ><?= $description ?></textarea>
+            <textarea name="description" id="" cols="" rows="" class="form-control"" ><?= $description ?></textarea>
           </div>
+          <div class=" form-group">
+              <label for="">Chọn màu</label>
+              <div class="color d-flex align-items-center" style="gap: 15px;">
+                <div class="">
+                  <p>Trắng <input name="color[]" type="checkbox" value="Trắng"></p>
+                </div>
+                <div class="">
+                  <p>Xanh Dương <input name="color[]" type="checkbox" value="Xanh Dương"></p>
+                </div>
+                <div class="">
+                  <p>Đen <input name="color[]" type="checkbox" value="Đen"></p>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="">Chọn size</label>
+              <div class="size d-flex align-items-center" style="gap: 15px;">
+                <div class="">
+                  <p>S <input name="size[]" type="checkbox" value="S"></p>
+                </div>
+                <div class="">
+                  <p>M <input name="size[]" type="checkbox" value="M"></p>
+                </div>
+                <div class="">
+                  <p>L <input name="size[]" type="checkbox" value="L"></p>
+                </div>
+              </div>
+              <div class="form-group">
+              <label for="">Số lượng</label>
+              <input name="quantity" type="number" class="form-control" required>
+            </div>
 
           <div class=" form-group mt-3">
             <input type="hidden" name="size_id">
