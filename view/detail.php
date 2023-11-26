@@ -103,7 +103,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <label for="size">Size</label>
-                  <select name="variant_id" class="form-control">
+                  <select name="size" class="form-control">
                     <option value="0">Chọn size</option>
                     <?php
                     $sizes = array_unique(array_column($list_variant, 'size')); // Lấy danh sách các size duy nhất
@@ -118,7 +118,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <label for="color">Color</label>
-                  <select name="variant_id" class="form-control">
+                  <select name="color" class="form-control">
                     <option value="0">Chọn màu</option>
                     <?php
                     $colors = array_unique(array_column($list_variant, 'color')); // Lấy danh sách các màu duy nhất
@@ -176,16 +176,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-            Giày thể thao nữ vải nữ viền độn đế mũi viền kẻ caro siêu hot <br><br>
-
-            - Kiểu dáng thanh lịch, màu sắc hài hòa trang nhã<br>
-            - Đế bằng cao su tổng hợp chắc chắn, bền <br><br>
-
-            - Giày có hộp của shop mới 100%, nhưng trong quá trình vận chuyển rất có thể hộp sẽ bị móp méo, điều này shop không hề mong muốn và cũng không thể can thiệp được vào công việc vận chuyển, nên mong anh/chị thông cảm. <br>
-            LƯU Ý: <br>
-            - Tất cả giầy shop bán xuất trực tiếp từ kho nên không chăm chút được cẩn thận. Cũng hy hữu có thể xảy ra khi giày bị méo form, nhưng khi nhận giầy anh/chị đi lên chân 5' là giầy vào lại form ạ. <br><br>
-
-            - Nến anh/chị nhận được sản phẩm lỗi hoặc do nhầm lẫn. Mong các bạn nhắn tin cho shop khắc phục trước khi đánh giá sản phẩm ạ ❤<br> Shop cam kết sẽ luôn có trách nhiệm với sản phẩm đã bán❤
+            <?php echo ($description); ?>
           </div>
           <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
             <div class="review-heading">REVIEWS</div>

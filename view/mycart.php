@@ -41,14 +41,14 @@
                         <?php
                         foreach ($list_img_cart as $value) {
                             extract($value);
-                            $img = "./upload/" . $img;
+                            $image = "./upload/" . $image;
                         ?>
 
                             <tr>
                                 <td>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <img src="<?= $img ?>" alt="" width="100">
+                                            <img src="<?= $image ?>" alt="" width="100">
                                         </div>
                                         <div class="media-body">
                                             <p><?= $product_name ?></p>
@@ -63,7 +63,12 @@
                                 </td>
                                 <td>
                                     <h5>
-                                        <?= $size_id ?>
+                                        <?= $size ?>
+                                    </h5>
+                                </td>
+                                <td>
+                                    <h5>
+                                        <?= $color ?>
                                     </h5>
                                 </td>
 
@@ -89,7 +94,7 @@
                                     <h5> <?= $status ?></h5>
                                 </td>
                                 <?php
-                                if ($status =='Đã giao hàng') {
+                                if ($status == 'Đã giao hàng') {
                                 ?>
                                     <td style="width: 15%;"><a style="border-radius: .5rem;" class="primary-btn" href="index.php?act=detail&product_id=<?= $product_id ?>">Đánh giá</a></td>
                                 <?php

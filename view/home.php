@@ -167,7 +167,6 @@
                         ';
                 }
                 ?>
-
             </div>
         </div>
     </div>
@@ -178,196 +177,55 @@
                 <div class="col-lg-6 text-center">
                     <div class="section-title">
                         <h1>Đang kinh doanh</h1>
-                        <p>Các mặt hàng hiện đang được các đối tác của Be-Sneaker đánh giá cao và tin dùng </p>
+                        <p>Các mặt hàng hiện đang được các đối tác của Valiu đánh giá cao và tin dùng </p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <!-- single product -->
                 <?php
-                // foreach ($product_new2 as $product_new2) {
-                //     extract($product_new2);
-                //     $linksp = "index.php?act=detail&product_id=" . $product_id;
-                //     $anh = "upload/" . $img;
-                //     echo '
-                // <div class="col-lg-3 col-md-6">
-                //     <div class="single-product">
-                //             <a href="' . $linksp . '">
-                //         <img class="img-fluid" src="' . $anh . '" alt="">
-                //         <div class="product-details">
-                //             <h6>' . $product_name . '</h6>
-                //             <div class="price">
-                //                 <h6>$' . $price . '.00</h6>
-                //                 <h6 class="l-through">$' . $price + 50 . '.00</h6>
-                //             </div>
-                //             <div class="prd-bottom">
-                //             <form action="index.php?act=cart"  method="post">
-                //                 <input type="hidden" name="product_id" value=" ' . $product_id . '">
-                //                 <input type="hidden" name="product_name" value=" ' . $product_name . '">
-                //                 <input type="hidden" name="price" value=" ' . $price . '">
-                //                 <input type="hidden" name="img" value=" ' . $img . '">
-                //                 <div class="prd-bottom"> 
-                //                 <a href="' . $linksp . '" class="social-info">
-                //                 <span class="lnr lnr-move"></span>
-                //                 <p class="hover-text">Xem thêm</p>
-                //                 </a>
-                //                 <a href="' . $cart . '" class="social-info">
-                //                 <span class="lnr lnr-heart"></span>
-                //                 <p class="hover-text">Thêm vào yêu thích</p>
-                //                 </a>
-                //                 </div>      
-                //             </from>
+                foreach ($product_new2 as $product_new2) {
+                    extract($product_new2);
+                    $linksp = "index.php?act=detail&product_id=" . $product_id;
+                    $anh = "upload/" . $image;
+                    echo '
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                            <a href="' . $linksp . '">
+                        <img class="img-fluid" src="' . $anh . '" alt="">
+                        <div class="product-details">
+                            <h6>' . $product_name . '</h6>
+                            <div class="price">
+                                <h6>$' . $price . '.00</h6>
+                                <h6 class="l-through">$' . $price + 50 . '.00</h6>
+                            </div>
+                            <div class="prd-bottom">
+                            <form action="index.php?act=cart"  method="post">
+                                <input type="hidden" name="product_id" value=" ' . $product_id . '">
+                                <input type="hidden" name="product_name" value=" ' . $product_name . '">
+                                <input type="hidden" name="price" value=" ' . $price . '">
+                                <input type="hidden" name="image" value=" ' . $image . '">
+                                <div class="prd-bottom"> 
+                                <a href="' . $linksp . '" class="social-info">
+                                <span class="lnr lnr-move"></span>
+                                <p class="hover-text">Xem thêm</p>
+                                </a>
+                                <a href="' . $cart . '" class="social-info">
+                                <span class="lnr lnr-heart"></span>
+                                <p class="hover-text">Thêm vào yêu thích</p>
+                                </a>
+                                </div>      
+                            </from>
 
-                //             </div>
-                //         </div>
-                //         </a>
+                            </div>
+                        </div>
+                        </a>
 
-                //     </div>
-                // </div>
-                // ';
-                // }
+                    </div>
+                </div>
+                ';
+                }
                 ?>
-                <!-- star product 2 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <a href="' . $linksp . '">
-                            <img class="img-fluid" src="./view/assets/img/product/p3.jpg" alt="">
-                            <div class="product-details">
-                                <h6>Vali luisvuiton</h6>
-                                <div class="price">
-                                    <h6>1.200.000</h6>
-                                    <h6 class="l-through">800.000</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <form action="index.php?act=cart" method="post">
-                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
-                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
-                                        <input type="hidden" name="price" value=" ' . $price . '">
-                                        <input type="hidden" name="img" value=" ' . $img . '">
-                                        <div class="prd-bottom">
-                                            <a href="' . $linksp . '" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">Xem thêm</p>
-                                            </a>
-                                            <a href="' . $cart . '" class="social-info">
-                                                <span class="lnr lnr-heart"></span>
-                                                <p class="hover-text">Thêm vào yêu thích</p>
-                                            </a>
-                                        </div>
-                                        </from>
-
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <a href="' . $linksp . '">
-                            <img class="img-fluid" src="./view/assets/img/product/p9.jpg" alt="">
-                            <div class="product-details">
-                                <h6>Vali tokyo</h6>
-                                <div class="price">
-                                    <h6>2.500.00</h6>
-                                    <h6 class="l-through">2.000.000</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <form action="index.php?act=cart" method="post">
-                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
-                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
-                                        <input type="hidden" name="price" value=" ' . $price . '">
-                                        <input type="hidden" name="img" value=" ' . $img . '">
-                                        <div class="prd-bottom">
-                                            <a href="' . $linksp . '" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">Xem thêm</p>
-                                            </a>
-                                            <a href="' . $cart . '" class="social-info">
-                                                <span class="lnr lnr-heart"></span>
-                                                <p class="hover-text">Thêm vào yêu thích</p>
-                                            </a>
-                                        </div>
-                                        </from>
-
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <a href="' . $linksp . '">
-                            <img class="img-fluid" src="./view/assets/img/product/p5.jpg" alt="">
-                            <div class="product-details">
-                                <h6>Vali UC</h6>
-                                <div class="price">
-                                    <h6>1.600.000</h6>
-                                    <h6 class="l-through">900.000</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <form action="index.php?act=cart" method="post">
-                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
-                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
-                                        <input type="hidden" name="price" value=" ' . $price . '">
-                                        <input type="hidden" name="img" value=" ' . $img . '">
-                                        <div class="prd-bottom">
-                                            <a href="' . $linksp . '" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">Xem thêm</p>
-                                            </a>
-                                            <a href="' . $cart . '" class="social-info">
-                                                <span class="lnr lnr-heart"></span>
-                                                <p class="hover-text">Thêm vào yêu thích</p>
-                                            </a>
-                                        </div>
-                                        </from>
-
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <a href="' . $linksp . '">
-                            <img class="img-fluid" src="./view/assets/img/product/p7.jpg" alt="">
-                            <div class="product-details">
-                                <h6>Vali Canvas</h6>
-                                <div class="price">
-                                    <h6>2.100.000</h6>
-                                    <h6 class="l-through">1.700.000</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <form action="index.php?act=cart" method="post">
-                                        <input type="hidden" name="product_id" value=" ' . $product_id . '">
-                                        <input type="hidden" name="product_name" value=" ' . $product_name . '">
-                                        <input type="hidden" name="price" value=" ' . $price . '">
-                                        <input type="hidden" name="img" value=" ' . $img . '">
-                                        <div class="prd-bottom">
-                                            <a href="' . $linksp . '" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">Xem thêm</p>
-                                            </a>
-                                            <a href="' . $cart . '" class="social-info">
-                                                <span class="lnr lnr-heart"></span>
-                                                <p class="hover-text">Thêm vào yêu thích</p>
-                                            </a>
-                                        </div>
-                                        </from>
-
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-                <!-- end product 2 -->
 
             </div>
         </div>

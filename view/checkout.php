@@ -81,7 +81,7 @@
                                                 <td><?= $value[2] ?></td>
                                                 <td><?= $value[4] ?></td>
                                                 <td><?= $value[5] ?></td>
-                                                <td><?= $value[5] ?></td>
+                                                <td><?= $value[6] ?></td>
                                                 <td><a onclick="return confirm('Bạn muốn xóa sản phẩm')" href="index.php?act=delete_checkout&cart_id=<?= $i++ ?>">xóa</a></td>
                                             </tr>
                                         <?php
@@ -109,10 +109,6 @@
                                     <?php
                                     $total_price = 0;
                                     foreach ($_SESSION['fake_cart'] as $value) {
-                                        // extract($value);
-                                        // echo '<pre>';
-                                        // print_r($value);
-                                        // echo 'hello';
                                         $total = $value[2] * $value[4];
                                         $total_price = $total_price + $total;
                                     ?>

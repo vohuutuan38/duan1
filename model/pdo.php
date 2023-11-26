@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Mở kết nối đến CSDL sử dụng PDO
  */
@@ -110,4 +111,3 @@ function pdo_query_value($sql)
         unset($conn);
     }
 }
-?>

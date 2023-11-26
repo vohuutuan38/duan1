@@ -1,6 +1,6 @@
 <!-- End Header Area -->
 <style>
-    .product__man img.img-fluid {
+    .valikeo img.img-fluid {
         width: 271px;
         height: 255px;
     }
@@ -43,7 +43,7 @@
             foreach ($load_all_product_man as $value) { ?>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="product__man single-product">
+                    <div class="valikeo single-product">
                         <a href="index.php?act=detail&product_id=<?php echo $value['product_id'] ?>" class="social-info">
                             <img class="img-fluid" src="./upload/<?php echo $value['image'] ?>" alt="">
                         </a>
