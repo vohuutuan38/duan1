@@ -73,19 +73,6 @@
               <input type="text" class="form-control" name="phone" placeholder="Phone">
               <span class="mt-3 float-left register" name="register"></span>
             </div>
-            <div class="form-group col-md-12">
-              <select class="form-select" name="" id="province"></select>
-            </div>
-            <div class="form-group col-md-12">
-              <select class="form-select" name="" id="district">
-                <option value="">Chọn quận</option>
-              </select>
-            </div>
-            <div class="form-group col-md-12">
-              <select class="form-select" name="" id="ward">
-                <option value="">Chọn phường</option>
-              </select>
-            </div>
             <div class="col-md-12 form-group">
               <input type="text" class="form-control" id="country" name="address" placeholder="Address" value="">
               <span class="mt-3 float-left register" name="register"></span>

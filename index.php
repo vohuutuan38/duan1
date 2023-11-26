@@ -42,7 +42,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                         $thongbao = "Tài khoản đã bị khóa.";
                         unset($_SESSION['username']);
                     } else {
-                        if ($_SESSION['username']['role'] == 0) {
+                        if ($_SESSION['username']['role'] == 'customer') {
                             header('Location:index.php');
                         } else {
                             header('Location:./admin/index.php');
